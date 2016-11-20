@@ -12,4 +12,4 @@
 	- Commits are the submission of branch changes that you want to go live in the master branch. A good commit message is short and sweet, but detailed enough for the next user to understand the changes made.
 
 * What is a merge conflict?
-	- Merge conflict occurs when two editors make different changes to the same line of code. One person may delete the line, and someone else may just edit it. Git doesn't know which is correct, thus ensues conflict! I picture two pirates both finding treasue at the same time and having to fight over who gets to take it home. 
+	- Merge conflict occurs when two editors make different changes to the same line of code. One person may delete the line, and someone else may just edit it. Git doesn't know which is correct, thus ensues conflict! I picture two pirates both finding "booty" at the same time and having to fight over who gets to take it home. 
