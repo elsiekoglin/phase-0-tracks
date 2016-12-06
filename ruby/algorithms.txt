@@ -1,0 +1,23 @@
+Equipping the Robot:
+-For going up in an elevator:
+	-Press the UP button
+	-Step inside elevator
+		-Select new floor number (must be greater than or equal to current floor number plus one).
+
+-For going down in an elevator:
+	-Press the DOWN button.
+	-Step inside elevator.
+		-Select new floor number (must be less than or equal to current floor number minus one).
+
+
+
+
+Getting Dressed (Real-life algorithm):
+-Do you have to go to work today:	
+	-If yes:
+		-Put on socially acceptable shirt.
+		-Put on socially acceptable pants. 
+		-Put on shoes.
+	
+	-Otherwise:
+		-Sweatpants all day.
