@@ -1,3 +1,37 @@
-body{
-	background-color: lightblue;
+header {
+  background-color: #FFF6D7;
+  max-width: 960px;
+  padding: 10px;
+  margin: 10px;
+}
+
+section.column-1 {
+  background-color: #DADB99;
+  max-width: 450px;
+  height: 1300px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 15px;
+  padding: 10px;
+}
+
+section.column-2 {
+  background-color: #9CA468;
+  max-width: 450px;
+  height: 1300px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+  padding: 10px;
+}
+
+img {
+  width: 450px;
+}
+
+footer {
+  background-color: #9D5755;
+  max-width: 960px;
+  margin-top: 10px;
+  padding: 10px;
 }
