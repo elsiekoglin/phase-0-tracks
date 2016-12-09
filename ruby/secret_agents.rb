@@ -11,10 +11,15 @@ def encrypt(password)
   index = 0
   encrypted = ""
   while index < password.length
-    encrypted += password[index].next
-    index += 1
+    if password[index] == "z"
+      encrypted += "a"
+      index += 1
+    else
+      encrypted += password[index].next
+      index += 1
+    end
   end
-  puts encrypted
+  return encrypted
 end
 
   # Defined decrypt method
@@ -29,14 +34,16 @@ def decrypt(password)
     decrypted += alphabet[prev_index]
     index += 1
   end
-    puts decrypted
+    return decrypted
 end
 
 if answer == "encrypt"
-  encrypt(password)
+   puts "Your encrypted password is: "
+   puts encrypt(password)
 end
 if answer == "decrypt"
-  decrypt(password)
+   puts "Your decrypted password is: "
+   puts decrypt(password)
 end
 
 
@@ -48,6 +55,7 @@ end
 # decrypt("afe")
 # 
 # decrypt(encrypt("swordfish"))
+
 
 # The nested method should work becuase 
 # you are telling the program to 
