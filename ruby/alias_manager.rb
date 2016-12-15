@@ -5,21 +5,20 @@
 
 attempts = 0
 
-until attempts == 4
+aliases = []
+
+until attempts == 3
 	attempts += 1
 
-puts "Please list your first name and last name"
-first_name = gets.chomp
-last_name = gets.chomp
+puts "Please list your full name (first and last name)."
+full_name = gets.chomp.downcase!
 
-first_name.downcase!
-first_name.tr!('aeiou', 'eioua') 
-first_name.tr!('bcdfghjklmnpqrstvwxyz','cdfghjklmnpqrstvwxyzb')
+full_name.tr!('aeiou', 'eioua') 
+full_name.tr!('bcdfghjklmnpqrstvwxyz','cdfghjklmnpqrstvwxyzb')
 
-
-last_name.downcase!
-last_name.tr!('aeiou', 'eioua') 
-last_name.tr!('bcdfghjklmnpqrstvwxyz','cdfghjklmnpqrstvwxyzb')
-
-puts " Your alias is #{first_name.capitalize} #{last_name.capitalize}."
+puts " Your alias is #{full_name.capitalize!}."
+aliases << full_name
 end
+
+puts "You have created the following aliases #{aliases}"
+
