@@ -1,3 +1,4 @@
+
 #________________RELEASE 1__________________
 =begin
 	
@@ -62,7 +63,7 @@ def fin(counter)
 	return array
 end
 
-
+p fin(200)
 
 # ______________RELEASE 2_____________
 
@@ -74,21 +75,28 @@ A NEW INSERTION SORT
 	- Organize the initial array in numeric or alphabetic order
 		-using index number to sort numbers in order
 		- alphatbetize and put using first, then up to two letters in the string if needed
+	
 	- Take new information and add it to the array according to numeric or alphatbetic order
 		- compare the number until it is adjacent to the numbers smaller or bigger
 		- compare the letters until it is adjacent to the letters before or after
+	
 	- Return new array
 
 =end
 
-unsort_array = [1, 3, 4, 2, 5]
+unsort_array = [1, 3, 4, 2, 5,45,23,43,54,65,21,78,54,32,5,7,433,9]
 
 
-def insertion_sort(arr_to_sort)
+def insertion_sort(arr_to_sort, input)
+  
+  arr_to_sort << input
+	arr_to_sort.sort
+	
+end
 
+insertion_sort([1, 3, 4, 10, 5], 2)
 
-
-
+p insertion_sort(unsort_array, 999)
 
 
 
