@@ -53,6 +53,50 @@ p Puppy.new.play_dead
 
 
 
+#Cat.new
+#Ralph = Cat.new(@name)
+#Fluffy = Cat.new
+#Caeli = Cat.new
+
+class Cat
+    def itiliaze
+    end
+
+    def speak (x)
+    puts "Meow!" * (x)
+    end
+
+    def scratch
+        puts "*scratching*"
+    end
+
+    def nap
+        puts "*napping*"
+    end
+end
+
+p Cat.new.speak(1)
+
+
+#Release 2
+    counter = 50
+    until counter == 0
+        #puts Cat.new.Caeli
+        puts Ralph
+        #puts Cat.new.Fluffy
+        counter -= 1
+    end
+
+# putting loop into data structure
+#initializing cat.new into the cat names 
+#so that we can apply all of the methods to each cat
+data_structure.each do |Ralph, Fluffy, Caeli|
+    puts |Ralph|.speak.scratch.nap
+    puts |Fluffy|.speak.scratch.nap
+    puts |Caeli|.speak.scratch.nap
+end
+
+
 
 
 
