@@ -75,7 +75,11 @@ class Cat
     end
 end
 
-p Cat.new.speak(1)
+ralph = Cat.new
+fluffy = Cat.new
+caeli = Cat.new
+
+puts ralph.speak(3)
 
 
 #Release 2
@@ -90,10 +94,10 @@ p Cat.new.speak(1)
 # putting loop into data structure
 #initializing cat.new into the cat names 
 #so that we can apply all of the methods to each cat
-data_structure.each do |Ralph, Fluffy, Caeli|
-    puts |Ralph|.speak.scratch.nap
-    puts |Fluffy|.speak.scratch.nap
-    puts |Caeli|.speak.scratch.nap
+data_structure.each do |ralph, fluffy, caeli|
+    puts |ralph|.speak.scratch.nap
+    puts |fluffy|.speak.scratch.nap
+    puts |caeli|.speak.scratch.nap
 end
 
 
