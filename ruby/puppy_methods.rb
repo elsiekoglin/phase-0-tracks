@@ -1,26 +1,8 @@
-
-
 #Driver Code:
 #Puppy.new
 #spot = Puppy.new
 #fido = Puppy.new
 #duchess = Puppy.new
-
-
-# Step 1 in Release 0 did NOT work for us. We couldn't figure out the prompt.
-# Our initialize method didn't do anyything when it was misspelled.
-
-
-
-#Driver Code:
-#Puppy.new
-#spot = Puppy.new
-#fido = Puppy.new
-#duchess = Puppy.new
-
-
-# Step 1 in Release 0 did NOT work for us. We couldn't figure out the prompt.
-# Our initialize method didn't do anything when it was misspelled.
 
 
 class Puppy
