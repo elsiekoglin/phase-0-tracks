@@ -71,9 +71,7 @@ class VirusPredictor
   puts " and will spread across the state in #{speed} months.\n\n"
 
   end
-
 end
-
 
 def state
   STATE_DATA.each do |key, value|
