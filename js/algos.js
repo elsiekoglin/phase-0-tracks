@@ -40,10 +40,30 @@ function match(match1, match2) {
   }
 }
 
-console.log(match(match1, match2))
+console.log(match(match1, match2));
 
 //--------------------------------------------------------------
 // Release 2:
+
+//Build and return an array of strings of the given length.
+
+//Create an empty array
+var array = [];
+
+// Build a function to add in random words 
+// ** I couldn't get the array to add in the "random" word multiple times
+function random(x) {
+  array.length == x;
+  (array.push("random"))*x;
+  console.log(array);
+}
+
+console.log(random(3));
+
+// Add method in release 2 into release 0 to create an array of randomized words. 
+// ** node didn't like the way I added in the method/I couldn't get it to work as intended.
+console.log(Search(random(3)));
+
 
 
 
