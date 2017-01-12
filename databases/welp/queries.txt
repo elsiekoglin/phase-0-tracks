@@ -1,0 +1,19 @@
+sqlite> SELECT * FROM businesses INNER JOIN users ON businesses.id=users.id
+   ...> INNER JOIN reviews ON businesses.id=reviews.id;
+1|The Beagle Nightlub|1|Bradford|Pitt|1|5|Great drink specials|1|2
+2|Lotus Yoga|2|Holly|Berry|2|4|The hot yoga class is great.|2|1
+3|Sushi World|3|Denzel|George|3|5|Great value and portions.|3|3
+sqlite> 
+
+##Just a test to see what it would return:
+sqlite> SELECT * FROM businesses, users JOIN reviews ON businesses.id=reviews.id;
+1|The Beagle Nightlub|1|Bradford|Pitt|1|5|Great drink specials|1|2
+1|The Beagle Nightlub|2|Holly|Berry|1|5|Great drink specials|1|2
+1|The Beagle Nightlub|3|Denzel|George|1|5|Great drink specials|1|2
+2|Lotus Yoga|1|Bradford|Pitt|2|4|The hot yoga class is great.|2|1
+2|Lotus Yoga|2|Holly|Berry|2|4|The hot yoga class is great.|2|1
+2|Lotus Yoga|3|Denzel|George|2|4|The hot yoga class is great.|2|1
+3|Sushi World|1|Bradford|Pitt|3|5|Great value and portions.|3|3
+3|Sushi World|2|Holly|Berry|3|5|Great value and portions.|3|3
+3|Sushi World|3|Denzel|George|3|5|Great value and portions.|3|3
+sqlite> 
