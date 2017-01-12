@@ -1,0 +1,50 @@
+COMMAND ONE:
+sqlite> SELECT * FROM binnys;
+1|Sauvignon Blanc|15|2
+2|Chardonnay|20|2
+3|Pinot Noir|7|1
+4|Cabernet Sauvignon|12|1
+sqlite> 
+
+COMMAND TWO:
+UPDATE binnys SET price=17 WHERE name="Chardonnay";
+sqlite> SELECT * FROM binnys;
+1|Sauvignon Blanc|15|2
+2|Chardonnay|17|2
+3|Pinot Noir|7|1
+4|Cabernet Sauvignon|12|1
+sqlite> 
+
+COMMAND THREE:
+sqlite> SELECT * FROM binnys, colors WHERE binnys.color_id = colors.id;
+1|Sauvignon Blanc|15|2|2||White|
+2|Chardonnay|17|2|2||White|
+3|Pinot Noir|7|1|1|Red||
+4|Cabernet Sauvignon|12|1|1|Red||
+sqlite> 
+
+
+COMMAND FOUR:
+sqlite> SELECT binnys.name, colors.id FROM binnys JOIN colors ON binnys.color_id = colors.id;
+Sauvignon Blanc|2
+Chardonnay|2
+Pinot Noir|1
+Cabernet Sauvignon|1
+sqlite> 
+
+COMMAND FIVE:
+sqlite> DELETE FROM binnys WHERE name="Chardonnay";
+sqlite> SELECT * FROM binnys;
+1|Sauvignon Blanc|15|2
+3|Pinot Noir|7|1
+4|Cabernet Sauvignon|12|1
+sqlite> 
+
+
+
+
+
+
+
+
+
