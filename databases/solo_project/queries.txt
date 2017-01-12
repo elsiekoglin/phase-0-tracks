@@ -40,6 +40,12 @@ sqlite> SELECT * FROM binnys;
 4|Cabernet Sauvignon|12|1
 sqlite> 
 
+COMMAND SIX:
+#### Whamp waaa :( 
+
+sqlite> SELECT name FROM binnys RIGHT JOIN colors ON binnys.name=colors.colors.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+sqlite> 
 
 
 
