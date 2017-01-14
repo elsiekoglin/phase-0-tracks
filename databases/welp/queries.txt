@@ -1,0 +1,46 @@
+
+COMMAND 2:
+sqlite> SELECT * FROM businesses INNER JOIN users ON businesses.id=users.id
+   ...> INNER JOIN reviews ON businesses.id=reviews.id;
+1|The Beagle Nightlub|1|Bradford|Pitt|1|5|Great drink specials|1|2
+2|Lotus Yoga|2|Holly|Berry|2|4|The hot yoga class is great.|2|1
+3|Sushi World|3|Denzel|George|3|5|Great value and portions.|3|3
+sqlite> 
+
+##TEST COMMAND (Just wanted to see what it would return)
+sqlite> SELECT * FROM businesses, users JOIN reviews ON businesses.id=reviews.id;
+1|The Beagle Nightlub|1|Bradford|Pitt|1|5|Great drink specials|1|2
+1|The Beagle Nightlub|2|Holly|Berry|1|5|Great drink specials|1|2
+1|The Beagle Nightlub|3|Denzel|George|1|5|Great drink specials|1|2
+2|Lotus Yoga|1|Bradford|Pitt|2|4|The hot yoga class is great.|2|1
+2|Lotus Yoga|2|Holly|Berry|2|4|The hot yoga class is great.|2|1
+2|Lotus Yoga|3|Denzel|George|2|4|The hot yoga class is great.|2|1
+3|Sushi World|1|Bradford|Pitt|3|5|Great value and portions.|3|3
+3|Sushi World|2|Holly|Berry|3|5|Great value and portions.|3|3
+3|Sushi World|3|Denzel|George|3|5|Great value and portions.|3|3
+sqlite> 
+
+COMMAND 3;
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM businesses INNER JOIN users ON businesses.id=users.id INNER JOIN reviews ON businesses.id=reviews.id;
+Bradford|Pitt|The Beagle Nightlub|5|Great drink specials
+Holly|Berry|Lotus Yoga|4|The hot yoga class is great.
+Denzel|George|Sushi World|5|Great value and portions.
+sqlite> 
+
+COMMAND 4:
+sqlite> SELECT * FROM businesses WHERE businesses.name="Sushi World" UNION ALL SELECT users.first_name, users.last_name FROM users UNION ALL SELECT reviews.stars, reviews.comment FROM reviews;
+3|Sushi World
+Bradford|Pitt
+Holly|Berry
+Denzel|George
+5|Great drink specials
+4|The hot yoga class is great.
+5|Great value and portions.
+sqlite> 
+
+
+
+
+
+
+
