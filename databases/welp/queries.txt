@@ -17,3 +17,10 @@ sqlite> SELECT * FROM businesses, users JOIN reviews ON businesses.id=reviews.id
 3|Sushi World|2|Holly|Berry|3|5|Great value and portions.|3|3
 3|Sushi World|3|Denzel|George|3|5|Great value and portions.|3|3
 sqlite> 
+
+
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM businesses INNER JOIN users ON businesses.id=users.id INNER JOIN reviews ON businesses.id=reviews.id;
+Bradford|Pitt|The Beagle Nightlub|5|Great drink specials
+Holly|Berry|Lotus Yoga|4|The hot yoga class is great.
+Denzel|George|Sushi World|5|Great value and portions.
+sqlite> 
