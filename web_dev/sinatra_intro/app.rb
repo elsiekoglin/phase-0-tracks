@@ -53,6 +53,14 @@ get '/contact/:address' do
   "I live at #{address}."
 end
 
+get '/great_job/:name' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
 
 
 
