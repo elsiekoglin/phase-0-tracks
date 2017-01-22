@@ -62,6 +62,17 @@ get '/great_job/:name' do
   end
 end
 
+get '/adder/:number_1/:number_2' do
+  def adder (x,y)
+    x + y
+  end
+
+  total = adder(params[:number_1].to_i, params[:number_2].to_i)
+
+  "#{params[:number_1]} + #{params[:number_2]} = #{total}"
+
+end
+
 
 
 
