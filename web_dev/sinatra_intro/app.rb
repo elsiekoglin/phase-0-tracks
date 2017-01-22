@@ -44,3 +44,35 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+
+# Release 0: Add Routes
+
+get '/contact/:address' do
+  address = params[:address]
+  "I live at #{address}."
+end
+
+get '/great_job/:name' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
+get '/adder/:number_1/:number_2' do
+  def adder (x,y)
+    x + y
+  end
+
+  total = adder(params[:number_1].to_i, params[:number_2].to_i)
+
+  "#{params[:number_1]} + #{params[:number_2]} = #{total}"
+
+end
+
+
+
+
